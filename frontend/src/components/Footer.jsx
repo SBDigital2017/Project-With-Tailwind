@@ -2,6 +2,7 @@ import React from "react";
 import ShinyText from "./ShinyText";
 import { motion } from "motion/react";
 import VariableProximity from "./VariableProximity";
+import ShinyTextBlue from "./ShinyTextBlue";
 
 function Footer() {
   return (
@@ -17,7 +18,9 @@ function Footer() {
         
         {/* Company Name */}
         <div className="text-center md:text-left">
-          <motion.h2 drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} whileDrag={{ cursor: "grabbing" }}  className="lg:text-3xl 2xl:text-4xl font-bold transition-all duration-300 hover:cursor-grab hover:scale-110 ">SB Digital Automation</motion.h2>
+          <motion.h2 drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} whileDrag={{ cursor: "grabbing" }}  className="lg:text-3xl 2xl:text-4xl font-bold transition-all duration-300 hover:cursor-grab hover:scale-110 ">
+            <ShinyText text={'SB Digital Automation'} speed={5} />
+          </motion.h2>
         </div>
 
         {/* Footer Table */}
@@ -53,8 +56,9 @@ function Footer() {
         </div>
       </div>
       {/* Copyright Section */}
-      <div className="relative z-20 text-gray-400 text-sm 2xl:text-md  py-5 mt-6 text-start 2xl:mx-30">
+      <div className="relative z-20 text-gray-400 text-sm 2xl:text-md text-start 2xl:mx-30">
         <ShinyText text="2025 SB Digital Automation, All Rights Reserved" speed={4} />
+        
       </div>
 
       <VariableProximity />

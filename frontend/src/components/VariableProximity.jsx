@@ -83,7 +83,7 @@ const VariableProximity = forwardRef((props, ref) => {
   }, [fromFontVariationSettings, toFontVariationSettings]);
 
   const calculateDistance = (x1, y1, x2, y2) =>
-    Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 1);
+    Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
   const calculateFalloff = (distance) => {
     const norm = Math.min(Math.max(1 - distance / radius, 0), 1);
@@ -147,11 +147,14 @@ const VariableProximity = forwardRef((props, ref) => {
       className='py-15 flex font-bold justify-center text-center text-3xl sm:text-5xl md:text-6xl lg:text-8xl 2xl:text-8xl  '
       {...restProps}
     >
+      
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="inline-block line  whitespace-nowrap">
           {word.split("").map((letter) => {
             const currentLetterIndex = letterIndex++;
             return (
+              <>
+              
               <motion.span
                 key={currentLetterIndex}
                 ref={(el) => { letterRefs.current[currentLetterIndex] = el; }}
@@ -162,8 +165,29 @@ const VariableProximity = forwardRef((props, ref) => {
                 }}
                 aria-hidden="true"
               >
-                {letter}
+               <motion.p 
+               className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl 2xl:text-8xl"
+               initial={{
+                opacity:0,
+                color:'white',
+                y:100
+                
+               }}
+               whileInView={{
+                opacity:1,
+                color:'black',
+                y:0,
+               }}
+
+               transition={{
+                duration:1
+               }}
+
+               viewport={{ once: false, amount: 0.4}}
+
+               > {letter}</motion.p>
               </motion.span>
+              </>
             );
           })}
           {wordIndex < words.length - 1 && <span className="inline-block">&nbsp;</span>}
@@ -171,6 +195,7 @@ const VariableProximity = forwardRef((props, ref) => {
       ))}
       <span className="sr-only">{label}</span>
     </span>
+    
   );
 });
 

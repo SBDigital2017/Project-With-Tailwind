@@ -7,6 +7,8 @@ import { Canvas } from '@react-three/fiber'
 import Footer from '../components/Footer'
 import { useRef } from "react";
 import VariableProximity from '../components/VariableProximity'
+import ScrollReveal from '../components/RevealText'
+import ShinyTextBlue from '../components/ShinyTextBlue'
 
 
 function Home() {
@@ -25,11 +27,6 @@ function Home() {
   return (
     <>
     <motion.div
-     initial={{ opacity: 0 }}
-     animate={{ opacity: 1 }}
-     exit={{ opacity: 0 }}
-     transition={{ duration: 1 }}
-
     className=" scroll-smooth  w-full min-w-100 max-w-8xl " >
 
     
@@ -80,7 +77,7 @@ function Home() {
                 }}
 
                 className='w-full  sm:pl-0 text-left  sm:text-left text-sm leading-5 sm:leading-6 2xl:leading-8 2xl:text-2xl lg:text-xl md:text-xl sm:text-lg text-[#d4d4d8] font-normal w-full  py-8'>Fuel Your Future with Innovation. At the intersection of challenges and passion, we redefine industries with advanced technologies. <br /><br />
-                Partner with us to transform your business into a power house of creativity and efficiency.
+                Partner with us to transform your business into a power house to bring best products & services.
                 </motion.h4>
 
 
@@ -88,12 +85,12 @@ function Home() {
                     <motion.button 
                      initial={{
                         opacity: 0,
-                        x: 1450,
+                        y: 100,
 
                     }}
                     animate={{
                         opacity: 1,
-                        x: 0,
+                        y: 0,
                          transition:{
                         delay: 1,
                         duration: 0.3,
@@ -139,8 +136,7 @@ function Home() {
          duration: 0.8,
          ease: "easeInOut",
        },
-     }}
-     viewport={{ once: false, amount: 0.05 }}
+     }} 
 
      // heading
      className='container  text-center max-w-8xl mx-auto my-15 md: px-5 sm:px-10 xl:px-20 ' id='design excellence DE'>  
@@ -207,51 +203,97 @@ function Home() {
                       y: 0,
                       opacity: 1,
                       transition: {
-                        delay: 0.5,
-                        duration: 0.7,
+                        delay: 0.1,
+                        duration: 0.5,
                         ease: "easeInOut",
                       },
                     }}
-                    viewport={{ once: false, amount: 0.02 }}
+                    viewport={{ once: false, amount: 0.1 }}
             className=" py-2 overflow-auto md:py-0 flex flex-row md:flex-col align-center justify-center">
                 <div
 
-                 onClick={() => setSelectedTab(1)} className="  text-[12px] text-white bg-black sm:text-black  py-2 px-5 rounded-sm sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-15 font-semibold || lg:text-2xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                 onClick={() => setSelectedTab(1)} className="  text-[12px] text-white bg-black sm:text-black  py-2 px-5 rounded-sm sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     One-Stop Solution
                 </div>
                 
                 <div
 
-                onClick={() => setSelectedTab(2)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-15 font-semibold || lg:text-2xl lg:font-bold  hover:bg-black hover:text-white cursor-pointer ">
-                    Quality Assurance
+                onClick={() => setSelectedTab(2)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-xl lg:font-bold  hover:bg-black hover:text-white cursor-pointer ">
+                    Assured Quality
                 </div>
                 <div 
 
-                onClick={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-15 font-semibold || lg:text-2xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                onClick={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     Bespoke Process
                 </div>    
+                <div 
+
+                onClick={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                    Time Line
+                </div>    
+                <div 
+
+                onClick={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                    Accountability
+                </div>    
+
+              {/* Time line and accountability to be added here */}
             
             </motion.div>
             <div className="border border-gray-300 m-1 rounded-xl ">
-                <div className="text flex flex-col justify-center items-center">
+                <div className="text  flex flex-col justify-center items-center">
                 {/* <svg width="70" height="60" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_104_86)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M110 0C115.523 0 120 4.47715 120 10V27.5736C120 36.4826 130.771 40.9443 137.071 34.6446L149.497 22.2182C153.403 18.313 159.734 18.313 163.64 22.2182L177.782 36.3604C181.687 40.2656 181.687 46.5973 177.782 50.5025L165.355 62.9289C159.056 69.2286 163.517 80 172.426 80H190C195.523 80 200 84.4771 200 90V110C200 115.523 195.523 120 190 120H172.426C163.517 120 159.056 130.771 165.355 137.071L177.782 149.497C181.687 153.403 181.687 159.734 177.782 163.64L163.64 177.782C159.734 181.687 153.403 181.687 149.497 177.782L137.071 165.355C130.771 159.056 120 163.517 120 172.426V190C120 195.523 115.523 200 110 200H90C84.4771 200 80 195.523 80 190V172.426C80 163.517 69.2286 159.056 62.9289 165.355L50.5025 177.782C46.5973 181.687 40.2656 181.687 36.3604 177.782L22.2183 163.64C18.313 159.734 18.313 153.403 22.2183 149.497L34.6447 137.071C40.9443 130.771 36.4827 120 27.5736 120H10C4.47716 120 0 115.523 0 110V90C0 84.4771 4.47715 80 10 80H27.5736C36.4826 80 40.9443 69.2286 34.6447 62.9289L22.2183 50.5025C18.313 46.5972 18.313 40.2656 22.2183 36.3604L36.3604 22.2182C40.2656 18.313 46.5973 18.313 50.5025 22.2182L62.9289 34.6446C69.2286 40.9443 80 36.4826 80 27.5736V10C80 4.47715 84.4771 0 90 0H110ZM100 150C127.614 150 150 127.614 150 100C150 72.3858 127.614 50 100 50C72.3858 50 50 72.3858 50 100C50 127.614 72.3858 150 100 150Z" fill="url(#paint0_linear_104_86)"/> </g> <defs> <linearGradient id="paint0_linear_104_86" x1="100" y1="0" x2="100" y2="200" gradientUnits="userSpaceOnUse"> <stop stop-color="#3D9EF9"/> <stop offset="1" stop-color="#916CF8"/> </linearGradient> <clipPath id="clip0_104_86"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg> */}
-                    <h1>Let us propel your success story with solution designed for tomorrow.</h1>
+                    
                     
                     {DesignEngg.map((item)=>{
                       return(
+                        <div className='flex items-center justify-center'>
+
                         <motion.img
-                    
-                    animate={{
-                        rotate:[0,360],
-                    }}
-                    transition={{
-                        duration:10,
-                        repeat:Infinity,
-                        ease:'linear'
-                    }}
-                    className='w-100 p-10' src={item.index === selectedTab ? item.img : ""} alt="" />
-                      )
-                    })}
+                              initial={{ scale:0,}} // Start position (off-screen bottom)
+
+                            
+                              whileInView={{
+                                scale: 1,
+                               
+                                transition: {
+                                  delay: 0.1,
+                                  duration: 0.8,
+                                  ease: "easeInOut",
+                                },
+                              }}
+                              
+                        
+                            animate={{
+                              rotate: item.index === 0 ? [360,-360] : 0,
+                              scale: item.index >= 1  ? [1, 1.2, 1] : 1,
+                              transition: {
+                                duration: 10,
+                                repeat: Infinity,
+                                repeatType: "linear",
+                              },
+                            }}
+                            className='w-50' src={item.index === selectedTab ? item.img : ""} alt="" />
+                              </div>
+                              )
+                        })}
+                          <motion.h1
+                            initial={{ y: 50, opacity: 0 }} // Start position (off-screen bottom)
+
+                            
+                            whileInView={{
+                              y: 0,
+                              opacity: 1,
+                              transition: {
+                                delay: 0.1,
+                                duration: 0.5,
+                                ease: "easeInOut",
+                              },
+                            }}
+                            viewport={{ once: false, amount: 0.1 }}
+                            className='text-sm lg:text-md 2xl:text-lg font-semibold px-30 py-5'>
+                              Let us propel your success story with solution designed for tomorrow.
+                          </motion.h1>
 
                       
                 </div>
@@ -277,13 +319,13 @@ function Home() {
          ease: "easeInOut",
        },
      }}
-     viewport={{ once: false, amount: 0.05 }}
+     
 
     // heading
     className=' max-w-8xl bg py-15 bg-[#F7F7F7] text-center max-w-8xl mx-auto my-10 md: px-5 sm:px-10 xl:px-20 ' id='design excellence DE'> 
     <motion.div
  
- className="Heading">
+ className="Heading solution-section">
      <h1
      className='w-full font-bold sm:font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
          Empowering Your Business with <br /> Tailored Solutions
@@ -297,7 +339,7 @@ function Home() {
        opacity: 1,
        transition: {
          delay: 0,
-         duration: 0.7,
+         duration: 0.3,
          ease: "easeInOut",
        },
      }}
@@ -323,7 +365,7 @@ function Home() {
               opacity: 1,
               transition: {
                   delay: 0.1,
-                  duration: 0.7,
+                  duration: 0.4,
                   ease: "easeInOut",
                 },
             }}
@@ -337,18 +379,18 @@ function Home() {
 
     {/* Solutions stack starts */}
 
-            <motion.div className='container mx-auto max-w-8xl  md:w-full flex flex-col gap-20 my-15'>
-            <div className="h-auto bg-white md:mx-15 2xl:mx-30 text-black grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
-                <div className=" engineering p-10 md:px-12 md:py-5 flex flex-col justify-center gap-8 2xl:gap-6">
+            <motion.div className='container mx-auto max-w-8xl  md:w-full flex flex-col gap-80 my-15'>
+            <div className="stack1 h-100 bg-white md:mx-5 2xl:mx-30 text-black grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
+                <div className=" p-10 md:px-12 md:py-5 flex flex-col justify-center gap-8 2xl:gap-6">
                     <motion.h1
-                     initial={{ y: -100, opacity: 0 }} // Start position (off-screen bottom)
+                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
                      whileInView={{
                        y: 0,
                        opacity: 1,
                        transition: {
 
-                         duration: 0.8,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
@@ -363,11 +405,11 @@ function Home() {
                        opacity: 1,
                        transition: {
 
-                         duration: 0.5,
+                         duration: 0.2,
                          ease: "easeInOut",
                        },
                      }}
-                     viewport={{ once: false, amount: 0.3 }}
+                     viewport={{ once: false, amount: 0.1 }}
                      className='text-center lg:text-left'>We provide a comprehensive range of essential engineering services to help our clients</motion.p>
                     <div className="w-full  justify-center lg:justify-start flex">
                     <motion.button 
@@ -380,12 +422,12 @@ function Home() {
                         opacity: 1,
                         y: 0,
                          transition:{
-                            delay: 0.3,
-                        duration: 0.5,
+                            delay: 0.1,
+                        duration: 0.3,
                         
                     }
                     }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     
                     whileHover={{
                         scale: 0.9,
@@ -399,8 +441,10 @@ function Home() {
                         Engineering  
                     </motion.button>
                 </div>
+
+
                 </div>
-                <div className=" w-full p-5 ">
+                <div className="w-full p-5 ">
                     <motion.img
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
@@ -409,7 +453,7 @@ function Home() {
                   opacity: 1,
                   transition: {
                     delay: 0,
-                    duration: 0.5,
+                    duration: 0.3,
                     ease: "easeInOut",
                   },
                 }}
@@ -422,17 +466,17 @@ function Home() {
             
 
             {/* Cloud computing */}
-            <div className=" cloudComputing h-auto bg-[#030264] md:mx-15 2xl:mx-30 text-white grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
+            <div className="stack2 cloudComputing h-100 bg-[#030264] md:mx-5 2xl:mx-30 text-white grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
                 <div className="p-10 md:px-12 md:py-5 flex flex-col justify-center gap-8 md:gap-10 2xl:gap-8">
                     <motion.h1
-                     initial={{ y: -100, opacity: 0 }} // Start position (off-screen bottom)
+                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
                      whileInView={{
                        y: 0,
                        opacity: 1,
                        transition: {
 
-                         duration: 0.8,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
@@ -447,11 +491,11 @@ function Home() {
                        opacity: 1,
                        transition: {
 
-                         duration: 0.5,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
-                     viewport={{ once: false, amount: 0.3 }}
+                     viewport={{ once: false, amount: 0.1 }}
                      className='text-center lg:text-left'>
                         Our cloud solutions provide businesses with enhanced flexibility, robust security, and scalable infrastructure.
                         </motion.p>
@@ -466,12 +510,12 @@ function Home() {
                         opacity: 1,
                         y: 0,
                          transition:{
-                            delay: 0.3,
-                        duration: 0.5,
+                            delay: 0.1,
+                        duration: 0.3,
                         
                     }
                     }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     
                     whileHover={{
                         scale: 0.9,
@@ -486,37 +530,40 @@ function Home() {
                     </motion.button>
                 </div>
                 </div>
-                <div className=" w-full p-5 ">
-                    <motion.img
+                <div className="  w-full">
+                    <motion.video
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
-                whileInView={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    delay: 0,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  },
-                }}
-                viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full' src="/v6.png" alt="Engineering Model" />
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0,
+                        duration: 0.3,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    className="h-full"
+                    src="/clockani.webm" 
+                    autoPlay
+                    loop
+                    muted />
                 </div>
             </div>
             {/* Cloud computing Ends */}
         
             {/* IT Services */}
-            <div className="itServices h-auto bg-white md:mx-15 2xl:mx-30 text-black grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
+            <div className="stack3 itServices h-100 bg-white md:mx-5 2xl:mx-30 text-black grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
                 <div className="p-10 md:px-12 md:py-5 flex flex-col justify-center gap-8 2xl:gap-6">
                     <motion.h1
-                     initial={{ y: -100, opacity: 0 }} // Start position (off-screen bottom)
+                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
                      whileInView={{
                        y: 0,
                        opacity: 1,
                        transition: {
 
-                         duration: 0.8,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
@@ -531,11 +578,11 @@ function Home() {
                        opacity: 1,
                        transition: {
 
-                         duration: 0.5,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
-                     viewport={{ once: false, amount: 0.3 }}
+                     viewport={{ once: false, amount: 0.1 }}
                      className='text-center lg:text-left'>
                         We build high-performance applications and websites tailored to meet business  objectives</motion.p>
                     <div className="w-full  justify-center lg:justify-start flex">
@@ -549,12 +596,12 @@ function Home() {
                         opacity: 1,
                         y: 0,
                          transition:{
-                            delay: 0.3,
-                        duration: 0.5,
+                            delay: 0.1,
+                        duration: 0.3,
                         
                     }
                     }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     
                     whileHover={{
                         scale: 0.9,
@@ -569,7 +616,7 @@ function Home() {
                     </motion.button>
                 </div>
                 </div>
-                <div className=" w-full p-5 ">
+                <div className=" w-full p-5">
                     <motion.img
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
@@ -578,27 +625,27 @@ function Home() {
                   opacity: 1,
                   transition: {
                     delay: 0,
-                    duration: 0.5,
+                    duration: 0.3,
                     ease: "easeInOut",
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full' src="/v6.png" alt="Engineering Model" />
+                    className='object-contain h-full' src="" alt="Engineering Model" />
                 </div>
             </div>
             {/* IT Services Ends */}
             {/* PLM Services Starts */}
-            <div className="plm h-auto bg-[#030264] md:mx-15 2xl:mx-30 text-white grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
+            <div className="stack4 plm h-100 bg-[#030264] md:mx-5 2xl:mx-30 text-white grid grid-cols-1 lg:grid-cols-[1fr_1fr] rounded-4xl">
                 <div className="p-10 md:px-12 md:py-5 flex flex-col justify-center gap-8 2xl:gap-8">
                     <motion.h1
-                     initial={{ y: -100, opacity: 0 }} // Start position (off-screen bottom)
+                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
-                     whileInView={{
+                     whileInView={{ 
                        y: 0,
                        opacity: 1,
                        transition: {
 
-                         duration: 0.8,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
@@ -613,11 +660,11 @@ function Home() {
                        opacity: 1,
                        transition: {
 
-                         duration: 0.5,
+                         duration: 0.3,
                          ease: "easeInOut",
                        },
                      }}
-                     viewport={{ once: false, amount: 0.3 }}
+                     viewport={{ once: false, amount: 0.1 }}
                      className='text-center lg:text-left'>
                       We help you manage every stage of the product lifecycle with seamless integration, automation, and intelligence.</motion.p>
                     <div className="w-full  justify-center lg:justify-start flex">
@@ -631,12 +678,12 @@ function Home() {
                         opacity: 1,
                         y: 0,
                          transition:{
-                            delay: 0.3,
-                        duration: 0.5,
+                            delay: 0.1,
+                        duration: 0.3,
                         
                     }
                     }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     
                     whileHover={{
                         scale: 0.9,
@@ -660,7 +707,7 @@ function Home() {
                   opacity: 1,
                   transition: {
                     delay: 0,
-                    duration: 0.5,
+                    duration: 0.3,
                     ease: "easeInOut",
                   },
                 }}
@@ -684,7 +731,7 @@ function Home() {
                 opacity: 1,
                 transition: {
                     delay: 0,
-                    duration: 0.7,
+                    duration: 0.3,
                     ease: "easeInOut",
                 },
                 }}
@@ -700,7 +747,7 @@ function Home() {
               opacity: 1,
               transition: {
                 delay: 0,
-                duration: 0.7,
+                duration: 0.3,
                 ease: "easeInOut",
               },
             }}
@@ -759,25 +806,25 @@ function Home() {
     {/* Scetion 4 ends here */}
 
     {/* partner */}
-    {/* <motion.div 
-     initial={{ y:200, opacity: 0 }} // Start position (off-screen bottom)
 
-     whileInView={{
-       y:0,
-       opacity: 1,
-       transition: {
-         delay: 0,
-         duration: 0.9,
-         ease: "easeInOut",
-       },
-     }}
-     viewport={{ once: false, amount: 0.1 }}
-    className="max-w-8xl mx-auto partner py-15 px-5 lg:py-25 lg:px-10 2xl:py-10 2xl:px-30 flex flex-col justify-center items-center">
-        <h1
-        className='py-15 flex justify-center text-center text-3xl sm:text-5xl md:text-6xl lg:text-[85px] 2xl:text-8xl font-bold lg:font-semibold'>
-          Partner With Us to Transform Your Business into a Power House of Creativity & Efficiency</h1>
-        <motion.button
-         // Start position (off-screen bottom)
+        <div className='py-20 px-10 sm:py-22 sm:px-20 lg:px-10 lg:py-10 2xl:py-40 flex flex-col items-center justify-center'
+          ref={containerRef}
+          style={{position: 'relative'}}
+          >
+            <VariableProximity
+              label={'Partner With Us to Transform Your Business into a Power House of Creativity & Efficiency'}
+              className={'variable-proximity-demo'}
+              fromFontVariationSettings="'wght' 300, 'opsz' 90"
+              toFontVariationSettings="'wght' 1500, 'opsz' 50"
+              containerRef={containerRef}
+              radius={200}
+              falloff='linear'
+              />  
+
+              <div className='my-2'>
+            <motion.button
+            initial={{ y: 40, opacity: 0 }} // Start position (off-screen bottom)
+            
             whileHover={{
                 scale: 0.95,
                 cursor:'pointer',
@@ -785,29 +832,24 @@ function Home() {
                border: "1px solid rgb(0, 0, 0)",
                color:"black",
             }}
-            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-20 lg:py-3 2xl:px-22 2xl:py-5 rounded-full'>
-                Become a Partner
-            </motion.button>
-    </motion.div> */}
-
-      <div
-            ref={containerRef}
-            style={{
-              padding: "50px",
-              textAlign: "center",
-              minHeight: "100vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+            
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                  delay: 0.1,
+                  duration: 0.7,
+                  ease: "easeInOut",
+                },
             }}
-          >
-            <VariableProximity
-              label="Partner With Us to Transform Your Business into a Power House of Creativity & Efficiency"
-              fromFontVariationSettings="'wght' 100"
-              toFontVariationSettings="'wght' 900"
-              containerRef={containerRef}
-            />
-          </div>
+            viewport={{ once: false, amount: 0.1 }}
+            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-15 lg:py-3 2xl:px-12 2xl:py-5  rounded-full'>
+                Partner with Us
+            </motion.button>
+                </div>  
+        </div>
+        
+
 
     {/* partner ends here */}
 
@@ -875,7 +917,7 @@ function Home() {
 
            className=''>
                 <div className='flex lg:px-10 2xl:pr-50 justify-center items-center  w-full'>
-                    <div className='grid grid-cols-4 lg:grid-cols-2  py-10 gap-25 sm:gap-40 md:50 lg:gap-20 xl:25 '>
+                    <div className='grid grid-cols-4 lg:grid-cols-2  py-10 gap-25 sm:gap-40 md:50 lg:gap-10 xl:25 '>
                         <motion.div
                         initial={{y:200, opacity:0}}
                         whileInView={{
@@ -887,46 +929,46 @@ function Home() {
                               ease: "easeInOut",
                             },
                         }}
-                        viewport={{ once: false, amount: 0.4 }}
-                        className='flex gap-5  flex-col justify-center items-center font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl '>
+                        viewport={{ once: false, amount: 0.1 }}
+                        className='flex gap-5 pt-10 flex-col justify-center items-center font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl '>
                             <div
                             className=''
                             >
-                              <motion.img
-                              initial={{ scale:1 }}
-                              animate={{
-                                rotate: [0, 360],
-
-                                transition:{
-                                  duration: 3,
-                                  repeat: Infinity,
-                                  ease:'anticipate'
-                                }
-                              }}
-  
-                              whileHover={{
-                                scale: 1.1,
-                                transition:{
-                                  duration:0.1
-                                },
-                                cursor:'grab'
-                              }}
-  
-                              drag
-                              whileDrag={{
-                                cursor:'grabbing'
-                              }}
-                              dragConstraints={{
-                                top:0,
-                                left:0,
-                                right:0,
-                                bottom:0             
-                              }}
-                              className='min-w-18 sm:min-w-20 md:min-w-30 w-40' src="/clock.png" alt="" />
-                    
+                             <motion.video
+                                    initial={{ scale: 1.3}}
+                                    animate={{
+                                      // rotate: [0, 360], // Continuous rotation
+                                    }}
+                                    transition={{
+                                      duration: 3,
+                                      
+                                      ease: "anticipate",
+                                    }}
+                                    whileHover={{
+                                      
+                                      transition: { duration: 0.1 },
+                                      cursor: "grab",
+                                    }}
+                                    drag
+                                    whileDrag={{
+                                      cursor: "grabbing",
+                                    }}
+                                    dragConstraints={{
+                                      top: 0,
+                                      left: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                    }}
+                                    className="min-w-18 sm:min-w-20 md:min-w-20 w-30"
+                                    src="/competence1.webm" 
+                                    autoPlay
+                                    loop
+                                    muted
+                                  />
                             </div>
                             <div>
-                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-2xl text-center '>Competency</h1>
+                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-lg lg:text-xl text-center '>
+                                Competence </h1>
                             </div>
                           </motion.div>
                         <motion.div 
@@ -940,67 +982,15 @@ function Home() {
                               ease: "easeInOut",
                             },
                         }}
-                        viewport={{ once: false, amount: 0.4 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         className='flex gap-5 flex-col justify-center items-center font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl '>
                             <div
                             className=''
                             >
-                              <motion.img
+                               <motion.img
                               initial={{ scale:1 }}
                               animate={{
-                                rotate: [0, 360],
-                                transition:{
-                                  duration: 3,
-                                  repeat: Infinity,
-                                  ease:'anticipate'
-                                }
-                              }}
-  
-                              whileHover={{
-                                scale: 1.1,
-                                transition:{
-                                  duration:0.1
-                                },
-                                cursor:'grab'
-                              }}
-  
-                              drag
-                              whileDrag={{
-                                cursor:'grabbing'
-                              }}
-                              dragConstraints={{
-                                top:0,
-                                left:0,
-                                right:0,
-                                bottom:0             
-                              }}
-                              className='min-w-18 sm:min-w-20 md:min-w-30 w-40' src="/clock.png" alt="" />
-                    
-                            </div>
-                            <div>
-                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-2xl text-center '>Timely Service</h1>
-                            </div>
-                          </motion.div>
-                          <motion.div
-                        initial={{y:100, opacity:0}}
-                        whileInView={{
-                          y: 0,
-                          opacity: 1,
-                          transition: {
-                              delay: 0,
-                              duration: 0.8,
-                              ease: "easeInOut",
-                            },
-                        }}
-                        viewport={{ once: false, amount: 0.4 }}
-                        className='flex gap-5  flex-col justify-center items-center font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl '>
-                            <div
-                            className=''
-                            >
-                              <motion.img
-                              initial={{ scale:1 }}
-                              animate={{
-                                rotate: [0, 360],
+                                // rotate: [0, 360],
 
                                 transition:{
                                   duration: 3,
@@ -1027,11 +1017,66 @@ function Home() {
                                 right:0,
                                 bottom:0             
                               }}
-                              className='min-w-18 sm:min-w-20 md:min-w-30 w-40' src="/clock.png" alt="" />
+                              className='min-w-18 sm:min-w-20 md:min-w-20 w-30' src="/stakeHolder.png" alt="" />
                     
+                             
                             </div>
                             <div>
-                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-2xl text-center '>Diligence</h1>
+                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-lg lg:text-xl text-center '>
+                                Stakeholders Trust</h1>
+                            </div>
+                          </motion.div>
+                          <motion.div
+                        initial={{y:100, opacity:0}}
+                        whileInView={{
+                          y: 0,
+                          opacity: 1,
+                          transition: {
+                              delay: 0,
+                              duration: 0.8,
+                              ease: "easeInOut",
+                            },
+                        }}
+                        viewport={{ once: false, amount: 0.1 }}
+                        className='flex gap-5  flex-col justify-center items-center font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl '>
+                            <div
+                            className=''
+                            >
+                               <motion.video
+                                    initial={{ scale: 1.3}}
+                                    animate={{
+                                      // rotate: [0, 360], // Continuous rotation
+                                    }}
+                                    transition={{
+                                      duration: 3,
+                                      
+                                      ease: "anticipate",
+                                    }}
+                                    whileHover={{
+                                      
+                                      transition: { duration: 0.1 },
+                                      cursor: "grab",
+                                    }}
+                                    drag
+                                    whileDrag={{
+                                      cursor: "grabbing",
+                                    }}
+                                    dragConstraints={{
+                                      top: 0,
+                                      left: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                    }}
+                                    className="min-w-10 sm:min-w-10 md:min-w-15 w-20  "
+                                    src="/deligence.webm" 
+                                    autoPlay
+                                    loop
+                                    muted
+                                  />
+                            </div>
+                            <div>
+                              <h1 className='font-semibold  lg:font-bold text-lg sm:text-xl md:text-lg lg:text-xl text-center '>
+                                Diligence</h1>
                             </div>
                           </motion.div>
                         <motion.div
@@ -1052,7 +1097,7 @@ function Home() {
                                  <motion.video
                                     initial={{ scale: 1 }}
                                     animate={{
-                                      rotate: [0, 360], // Continuous rotation
+                                      // rotate: [0, 360], // Continuous rotation
                                     }}
                                     transition={{
                                       duration: 3,
@@ -1074,7 +1119,7 @@ function Home() {
                                       right: 0,
                                       bottom: 0,
                                     }}
-                                    className="min-w-18 sm:min-w-20 md:min-w-30 w-40"
+                                    className="min-w-18 sm:min-w-20 md:min-w-20 w-30"
                                     src="/clock.webm" // Replace with your actual video source
                                     autoPlay
                                     loop
@@ -1083,7 +1128,8 @@ function Home() {
                     
                             </div>
                             <div>
-                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-2xl text-center '>Stakeholders Trust</h1>
+                              <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-xl text-center '>
+                              Timely Service</h1>
                             </div>
                           </motion.div>
                         
@@ -1094,25 +1140,13 @@ function Home() {
             
     </section>
     
-              <motion.footer
-                initial={{y:100, opacity:0}}
-                whileInView={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                      delay: 0,
-                      duration: 0.8,
-                      ease: "easeInOut",
-                  }
-
-                }}
-                viewport={{ once: false, amount: 0.1 }}
-              className="">
-                <Footer/>
-              </motion.footer>
 
     {/* values ends here */}
     </motion.div>
+              <motion.footer
+              className=" w-full bottom-0">
+                <Footer/>
+              </motion.footer>
     </>
   )
 }

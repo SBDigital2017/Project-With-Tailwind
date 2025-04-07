@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+
+.solution-section{
+    position: sticky;   
+    top:60px;
+}
+
+.stack1 {
+    position: sticky;
+    top: 200px;
+}
+.stack2, .stack3, .stack4  {
+    position: sticky;
+    top: 220px;
+}
+
+.stack3{
+    top: 240px;
+}
+.stack3{
+    bottom: 260px;
+}
