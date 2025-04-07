@@ -196,7 +196,7 @@ function Home() {
         
         <div
 
-        className="my-0 md:my-10  md:mx-25 grid md:grid-cols-[1fr_1.5fr] md:border md:border-gray-300 rounded-xl" id='Excellence'>
+        className="my-0 md:my-10 md:mx-25 grid md:grid-cols-[1fr_1.5fr] md:border md:border-gray-100 rounded-xl" id='Excellence'>
             <motion.div
                     initial={{ y: 50, opacity: 0 }} // Start position (off-screen bottom)
 
@@ -213,28 +213,28 @@ function Home() {
             className=" py-2 overflow-auto md:py-0 flex flex-row md:flex-col align-center justify-center">
                 <div
 
-                 onMouseEnter={() => setSelectedTab(1)} className=" text-[12px] text-white bg-black sm:text-black  py-2 px-5 rounded-sm sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                 onMouseEnter={() => setSelectedTab(1)} className=" text-[12px] text-white bg-black sm:text-black  py-2 px-5 rounded-sm sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 2xl:py-5 font-semibold || 2xl:text-xl lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     One-Stop Solution
                 </div>
                 
                 <div
 
-                onMouseEnter={() => setSelectedTab(2)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold  hover:bg-black hover:text-white cursor-pointer ">
+                onMouseEnter={() => setSelectedTab(2)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 2xl:py-5  font-semibold || 2xl:text-xl lg:text-lg lg:font-bold  hover:bg-black hover:text-white cursor-pointer ">
                     Assured Quality
                 </div>
                 <div 
 
-                onMouseEnter={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                onMouseEnter={() => setSelectedTab(3)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 2xl:py-5  font-semibold || 2xl:text-xl lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     Bespoke Process
                 </div>    
                 <div 
 
-                onMouseEnter={() => setSelectedTab(4)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                onMouseEnter={() => setSelectedTab(4)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 2xl:py-5  font-semibold || 2xl:text-xl lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     Time Line
                 </div>    
                 <div 
 
-                onMouseEnter  ={() => setSelectedTab(5)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 font-semibold || lg:text-lg lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
+                onMouseEnter  ={() => setSelectedTab(5)} className="text-[12px] text-white bg-black sm:text-black py-2 px-5 rounded-sm text-md sm:bg-[#f7f7f7] md:border border-gray-300 m-1 md:rounded-xl  md:py-3 2xl:py-5  font-semibold || lg:text-lg 2xl:text-xl lg:font-bold hover:bg-black hover:text-white cursor-pointer ">
                     Accountability
                 </div>    
 
@@ -271,7 +271,7 @@ function Home() {
                                 repeatType: "easeInOut",
                               },
                             }}
-                            className='w-115 '  src={item.index === selectedTab ? item.img : ""} alt="" />
+                            className='w-80 lg:w-115 '  src={item.index === selectedTab ? item.img : ""} alt="" />
                               
                               <motion.h1
                             className='text-sm lg:text-md 2xl:text-lg font-semibold px-10 '>
