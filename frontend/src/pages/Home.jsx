@@ -167,32 +167,6 @@ function Home() {
             </motion.h4>
         </motion.div>
         
-        <div className='mb-8'>
-            <motion.button
-            initial={{ y: 40, opacity: 0 }} // Start position (off-screen bottom)
-            
-            whileHover={{
-                scale: 0.95,
-                cursor:'pointer',
-                backgroundColor: "transparent",
-               border: "1px solid rgb(0, 0, 0)",
-               color:"black",
-            }}
-            
-            whileInView={{
-              y: 0,
-              opacity: 1,
-              transition: {
-                  delay: 0.1,
-                  duration: 0.7,
-                  ease: "easeInOut",
-                },
-            }}
-            viewport={{ once: false, amount: 0.1 }}
-            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-10 lg:py-4 2xl:px-12 2xl:py-5  rounded-full'>
-                Become a Partner
-            </motion.button>
-                </div>
         
         <div
 
@@ -533,7 +507,7 @@ function Home() {
                       },
                     }}
                     className="h-full"
-                    src="/clockani.webm" 
+                    src="/simplecloud.webm" 
                     autoPlay
                     loop
                     muted />
@@ -690,7 +664,7 @@ function Home() {
                     </motion.button>
                 </div>
                 </div>
-                <div className=" w-full p-5 ">
+                <div className="w-full p-5 ">
                     <motion.img
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
@@ -704,7 +678,7 @@ function Home() {
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full' src="/v6.png" alt="Engineering Model" />
+                    className='object-contain h-full lg:h-90 2xl:h-110' src="/plmdraft.png" alt="Engineering Model" />
                 </div>
             </div>
             {/* PLM Service Ends */}
@@ -1102,14 +1076,12 @@ function Home() {
                                     loop
                                     muted
                                   />
-                    
                             </div>
                             <div>
                               <h1 className='font-semibold lg:font-bold text-lg sm:text-xl md:text-xl lg:text-xl text-center '>
                               Timely Service</h1>
                             </div>
                           </motion.div>
-                        
                     </div>
                 </div>
 

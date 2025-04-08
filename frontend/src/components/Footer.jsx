@@ -19,7 +19,7 @@ function Footer() {
         {/* Company Name */}
         <div className="text-center md:text-left">
           <motion.h2 drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} whileDrag={{ cursor: "grabbing" }}  className="lg:text-3xl 2xl:text-4xl font-bold transition-all duration-300 hover:cursor-grab hover:scale-110 ">
-            <ShinyText text={'SB Digital Automation'} speed={5} />
+            <ShinyTextBlue text={'SB Digital Automation'} speed={5} ></ShinyTextBlue>
           </motion.h2>
         </div>
 
