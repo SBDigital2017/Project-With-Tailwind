@@ -337,7 +337,7 @@ function Home() {
          Our approach ensures that clients receive tailored, end-to-end solutions that not <br />only boost productivity but also drive sustainable, long-term success.
      </motion.h4>
 
-     <div className='my-2'>
+     <div className='mt-4'>
             <motion.button
             initial={{ y: 40, opacity: 0 }} // Start position (off-screen bottom)
             
@@ -359,7 +359,7 @@ function Home() {
                 },
             }}
             viewport={{ once: false, amount: 0.1 }}
-            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-15 lg:py-3 2xl:px-12 2xl:py-5  rounded-full'>
+            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-15 lg:py-3 2xl:px-12 2xl:py-3  rounded-full'>
                 About Us
             </motion.button>
                 </div>
@@ -447,7 +447,7 @@ function Home() {
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full' src="/v6.png" alt="Engineering Model" />
+                    className='object-contain h-full lg:h-100 2xl:h-120' src="/engg.png" alt="Engineering Model" />
                 </div>
             </div>
 
@@ -605,21 +605,24 @@ function Home() {
                     </motion.button>
                 </div>
                 </div>
-                <div className=" w-full p-5">
-                    <motion.img
+                <div className="  w-full">
+                    <motion.video
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
 
-                whileInView={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    delay: 0,
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
-                viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full' src="/v6.png" alt="Engineering Model" />
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0,
+                        duration: 0.3,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    className="h-full lg:h-100 2xl:h-125"
+                    src="/itservice.webm" 
+                    autoPlay
+                    loop
+                    muted />
                 </div>
             </div>
             {/* IT Services Ends */}
@@ -711,92 +714,77 @@ function Home() {
     </motion.section>
     {/* Section 3 ends here */}
 
-    <section className="4platform overflow-hidden py-12 px-10 sm:py-30 sm:px-20 lg:px-0 lg:pt-25 2xl:pb-25 lg:pb-18 grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
-           <div className='lg:pl-20 2xl:pl-50 lg:gap-5  text text-center lg:text-left flex flex-col items-center justify-center lg:items-start '>
-           <motion.h1
-                initial={{ y: -100, opacity: 0 }}
-                whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                    delay: 0,
-                    duration: 0.3,
-                    ease: "easeInOut",
-                },
-                }}
-                viewport={{ once: false, amount: 0.1 }}
-            className='w-full font-bold sm:font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
-                Need a platform tailored for Enterprise needs?
-            </motion.h1>
-            <motion.h4
-            initial={{ y: 100, opacity: 0 }}
-
-            whileInView={{
-              y: 0,
-              opacity: 1,
-              transition: {
-                delay: 0,
-                duration: 0.3,
-                ease: "easeInOut",
-              },
-            }}
-            viewport={{ once: false, amount: 0.1 }}
-            className='text-[12px] py-4  pt-3 sm:text-sm md:text-md lg:text-lg 2xl:text-xl'>
-                Our approach ensures that clients receive tailored, end-to-end solutions that not only boost productivity but also drive sustainable, long-term success.
-            </motion.h4>
-            <motion.button
-            initial={{ y: 40, opacity: 0 }} // Start position (off-screen bottom)
-            
-            whileHover={{
-                scale: 0.95,
-                cursor:'pointer',
-                backgroundColor: "transparent",
-               border: "1px solid rgb(0, 0, 0)",
-               color:"black",
-            }}
-            
-            whileInView={{
-              y: 0,
-              opacity: 1,
-              transition: {
-                  delay: 0.1,
-                  duration: 0.7,
-                  ease: "easeInOut",
-                },
-            }}
-            viewport={{ once: false, amount: 0.1 }}
-            className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-20 lg:py-3 2xl:px-22 2xl:py-5  rounded-full'>
-                About Us
-            </motion.button>
-           </div>
-
-           <motion.div 
-           animate={{
-            scale:1.4
-           }}
-           className='flex justify-center lg:justify-start mt-20 lg:mt-0 '>
-                <motion.img
-                initial={{ scale: 0, opacity: 0 }} // Start position (off-screen bottom)
+    <section className="4platform bg-[#f7f7f7] py-12 px-10 sm:py-30 sm:px-20 lg:px-0 lg:pt-25 2xl:pb-25 lg:pb-18 grid grid-cols-1 lg:grid-cols-[1fr_1fr] ">
+           <div className='lg:pl-20 bg-white rounded-4xl 2xl:pl-50 lg:gap-5  text text-center lg:text-left flex flex-col items-center justify-center lg:items-start '>
+              <motion.h1
+                    initial={{ y: -100, opacity: 0 }}
+                    whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                        delay: 0,
+                        duration: 0.3,
+                        ease: "easeInOut",
+                    },
+                    }}
+                    viewport={{ once: false, amount: 0.1 }}
+                className='w-full  font-bold sm:font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
+                    Need a platform tailored for Enterprise needs?
+                </motion.h1>
+                <motion.h4
+                initial={{ y: 100, opacity: 0 }}
 
                 whileInView={{
-                  scale: 1,
+                  y: 0,
                   opacity: 1,
                   transition: {
                     delay: 0,
-                    duration: 0.8,
+                    duration: 0.3,
                     ease: "easeInOut",
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                className="w-95 sm:w-120 md:w-150 lg:w-160 2xl:w-200 " src="/enterprise.png" alt=""  />
-           </motion.div>
-                            
+                className='text-[12px] py-4  pt-3 sm:text-sm md:text-md lg:text-lg 2xl:text-xl'>
+                    Our approach ensures that clients receive tailored, end-to-end solutions that not only boost productivity but also drive sustainable, long-term success.
+                </motion.h4>
+                <motion.button
+                initial={{ y: 40, opacity: 0 }} // Start position (off-screen bottom)
+                
+                whileHover={{
+                    scale: 0.95,
+                    cursor:'pointer',
+                    backgroundColor: "transparent",
+                  border: "1px solid rgb(0, 0, 0)",
+                  color:"black",
+                }}
+                
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                      delay: 0.1,
+                      duration: 0.7,
+                      ease: "easeInOut",
+                    },
+                }}
+                viewport={{ once: false, amount: 0.1 }}
+                className='bg-black text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl px-5 py-3  sm:px-10 sm:py-4 md:px-8 md:py-3  lg:px-20 lg:py-3 2xl:px-22 2xl:py-5  rounded-full'>
+                    About Us
+                </motion.button>
+              </div>
+
+              <div className='flex flex-col items-center justify-center lg:p-10 lg:pl-0 2xl:pl-0 2xl:p-30'>
+                <img
+                className='w-full h-full object-contain rounded-xl'
+                src="/platform.png" alt="platform" />
+
+                </div>    
     </section>
-    {/* Scetion 4 ends here */}
+    {/* Section 4 ends here */}
 
     {/* partner */}
 
-        <div className='py-20 px-10 sm:py-22 sm:px-20 lg:px-10 lg:py-10 2xl:py-40 flex flex-col items-center justify-center'
+        <div className='py-20 px-10 sm:py-22 sm:px-20 lg:px-10 lg:py-10 2xl:py-50 2xl:px-40 flex flex-col items-center justify-center'
           ref={containerRef}
           style={{position: 'relative'}}
           >
@@ -1128,13 +1116,11 @@ function Home() {
        </motion.div>
             
     </section>
-    
-
     {/* values ends here */}
     </motion.div>
               <motion.footer
-              className=" w-full bottom-0">
-                <Footer/>
+                className=" w-full bottom-0">
+                  <Footer/>
               </motion.footer>
     </>
   )

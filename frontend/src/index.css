@@ -18,3 +18,79 @@
 .stack3{
     top: 240px;
 }
+
+
+  /* Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .stack1 {
+        top: 140px;
+    }
+    .stack2, .stack3, .stack4  {
+        top:160px;
+    }
+    
+    .stack3{
+        top: 180px;
+    }
+  }
+  
+  /* Tablet (Portrait: 481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .stack1 {
+        top: 150px;
+    }
+    .stack2, .stack3, .stack4  {
+        top:170px;
+    }
+    
+    .stack3{
+        top: 190px;
+    }
+  }
+  
+  /* Tablet (Landscape) / Small Laptop (769px to 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .stack1 {
+        top: 165px;
+    }
+    .stack2, .stack3, .stack4  {
+        top:185px;
+    }
+    
+    .stack3{
+        top: 205px;
+    }
+  }
+  
+  /* Laptop / Desktop (1025px to 1440px) */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .stack1 {
+        top: 200px;
+    }
+    .stack2, .stack3, .stack4  {
+        top:220px;
+    }
+    
+    .stack3{
+        top: 240px;
+    }
+  }
+  
+  /* Large Desktop (1441px and above) */
+  @media (min-width: 1441px) {
+    .stack1 {
+        top: 280px;
+    }
+    .stack2, .stack3, .stack4  {
+        top:300px;
+    }
+    
+    .stack3{
+        top: 320px;
+    }
+
+    .stack4{
+        padding-top:5px;
+    }
+  }
+  
