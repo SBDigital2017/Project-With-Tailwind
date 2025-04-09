@@ -7,7 +7,6 @@ import { Canvas } from '@react-three/fiber'
 import Footer from '../components/Footer'
 import { useRef } from "react";
 import VariableProximity from '../components/VariableProximity'
-import ScrollReveal from '../components/RevealText'
 import ShinyTextBlue from '../components/ShinyTextBlue'
 
 
@@ -593,7 +592,7 @@ function Home() {
                       },
                     }}
                     className="h-full lg:h-100 2xl:h-125"
-                    src="/itservice.webm" 
+                    src="/itservicesdraft.webm" 
                     autoPlay
                     loop
                     muted />

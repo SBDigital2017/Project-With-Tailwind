@@ -1,7 +1,7 @@
 import { forwardRef, useMemo, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
-function useAnimationFrame(callback) {
+function useAnimationFrame(callback){
   useEffect(() => {
     let frameId;
     const loop = () => {
@@ -15,7 +15,6 @@ function useAnimationFrame(callback) {
 
 function useMousePositionRef(containerRef) {
   const positionRef = useRef({ x: 0, y: 0 });
-
   useEffect(() => {
     const updatePosition = (x, y) => {
       if (containerRef?.current) {
