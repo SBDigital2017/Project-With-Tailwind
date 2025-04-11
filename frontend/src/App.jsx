@@ -7,10 +7,12 @@ import Navbar from './components/Navbar'
 import Engineering from './pages/Engineering'
 import Footer from './components/Footer'
 import ITServices from './pages/ITServices'
+import useLenis from './components/lenins'
 
 
 
 function App() {
+  useLenis();
   const [count, setCount] = useState(0)
 
   return (

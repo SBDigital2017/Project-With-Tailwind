@@ -8,9 +8,11 @@ import Footer from '../components/Footer'
 import { useRef } from "react";
 import VariableProximity from '../components/VariableProximity'
 import ShinyTextBlue from '../components/ShinyTextBlue'
+import useLenis from '../components/lenins'
 
 
 function Home() {
+    useLenis();
 
     const [selectedTab, setSelectedTab] = useState(1);
     const DesignEngg = [
