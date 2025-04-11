@@ -42,14 +42,14 @@ export function FeatureSteps({
   }, [progress, features.length, autoPlayInterval])
 
   return (
-    <div className={cn("p-8 md:p-12", className)}>
+    <div className={cn("p-8 md:p-", className)}>
       <div className="max-w-7xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center">
-          {title}
+          {""}
         </h2>
 
         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
-          <div className="order-2 md:order-1 space-y-8">
+          <div className="order-2 md:order-1 space-y-5">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -73,11 +73,11 @@ export function FeatureSteps({
                   )}
                 </motion.div>
 
-                <div className="flex-1">
+                <div className="flex-1 text-left">
                   <h3 className="text-xl md:text-2xl font-semibold">
                     {feature.title || feature.step}
                   </h3>
-                  <p className="text-sm md:text-lg text-muted-foreground">
+                  <p className="text-sm md:text-[15px] text-muted-foreground">
                     {feature.content}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ export function FeatureSteps({
 
           <div
             className={cn(
-              "order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg"
+              "order-1 md:order-2 relative pt-20 h-[300px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg"
             )}
           >
             <AnimatePresence mode="wait">
@@ -96,7 +96,7 @@ export function FeatureSteps({
                   index === currentFeature && (
                     <motion.div
                       key={index}
-                      className="absolute inset-0 rounded-lg overflow-hidden"
+                      className="absolute rounded-lg overflow-hidden"
                       initial={{ y: 100, opacity: 0, rotateX: -20 }}
                       animate={{ y: 0, opacity: 1, rotateX: 0 }}
                       exit={{ y: -100, opacity: 0, rotateX: 20 }}
@@ -106,7 +106,7 @@ export function FeatureSteps({
                       className="w-full h-full object-cover transition-transform transform"
                       width={1000}
                       height={500}  />
-                      <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 " />
                     </motion.div>
                   ),
               )}
