@@ -422,7 +422,7 @@ function Home() {
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full lg:h-100 2xl:h-120' autoPlay loop muted  src="/innovativeSolutionsfinal.webm" alt="Engineering Model" />
+                    className='object-contain h-full lg:h-100 2xl:h-120' autoPlay loop muted  src="/itfinalfront.webm" alt="Engineering Model" />
                 </div>
             </div>
 
@@ -594,7 +594,7 @@ function Home() {
                       },
                     }}
                     className="h-full lg:h-100 2xl:h-125"
-                    src="/itservicesfinal.webm" 
+                    src="itfinalfront.webm" 
                     autoPlay
                     loop
                     muted />

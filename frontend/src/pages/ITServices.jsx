@@ -87,7 +87,7 @@ function ITServices() {
                 <div className=' z-1 lg:pt-15 overflow-hidden w-full flex items-center justify-center transition-all duration-700 ease-in-out   '>
                     <motion.video
                     initial={{
-                        x: 600,
+                        x: 800,
                         opacity: 0,
                         scale: 1.2
                     }}
