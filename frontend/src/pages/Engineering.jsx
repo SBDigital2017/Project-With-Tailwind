@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import SplitText from '../components/SplitText'
+import Footer from '../components/Footer'
 
 function Engineering() {
   return (
@@ -13,7 +14,7 @@ function Engineering() {
                   </div>
 
                   {/* text herosection */}
-                  <div className="text-hero absolute z-1 top:10 sm:top-20 sm:left-70 md:top-30 md:left-90 lg:top-40 2xl:top-70 lg:left-120 2xl:left-180 2xl:top-50">
+                  {/* <div className="text-hero absolute z-1 top:10 sm:top-20 sm:left-70 md:top-30 md:left-90 lg:top-40 2xl:top-70 lg:left-120 2xl:left-180 2xl:top-50">
                     <motion.h1 
                               initial={{
                                   y: -400,
@@ -56,7 +57,7 @@ function Engineering() {
                                     className='px-20 text-[0px] font-normal text-center sm:text-white sm:px-0 md:pr-30 font-bold  md:text-lg lg:text-xl 2xl:text-2xl sm:text-left 2xl:py-20 '>Fuel Your Future with Innovation. At the intersection of challenges and passion, we redefine industries with advanced technologies. <br /><br />
                                     Partner with us to transform your business into a power house to bring best products & services.
                                 </motion.h4>
-                  </div>
+                  </div> */}
           
 
 
@@ -65,7 +66,7 @@ function Engineering() {
 
 
           {/* Engineering Excell section */}
-          <section className="EnggExcell max-w-8xl mx-auto h-screen pt-10 px-5 md:pt-20 2xl:pt-30 md:px-10 2xl:px-20">
+          <section className="EnggExcell max-w-8xl mx-auto h-screen pt-10 px-5 md:pt-20 2xl:pt-30 md:px-0  2xl:px-20">
                 <div className=" 2xl:px-30 heading-engg  w-full flex-col items-center justify-center text-center ">
                     <motion.h1
                     initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
@@ -102,7 +103,7 @@ function Engineering() {
                          </motion.h4>
                 </div>
 
-                <div className="container engg stack"></div>
+                
 
                 <div className="content flex flex-col justify-start p-5 md:p-10 lg:p-20 2xl:p-30">
                     <div className="head">
@@ -139,11 +140,11 @@ function Engineering() {
                                      },
                                    }}
                                    viewport={{ once: false, amount: 0.1 }}
-                                   className=' py-2 md:py-4 lg:pr-10  md:pt-3 text-[12px] sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
-                                      We help businesses transform ideas into feasible designs by leveraging cutting-edge technologies, industry insights, and creative problem-solving.                                    </motion.h4>
-                                  
+                                   className=' py-2 md:py-4 lg:pr-10 text-justify  md:pt-3 text-[12px] sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
+                                      Concept design is the foundation of product development. We help businesses transform ideas into feasible designs by leveraging cutting-edge technologies, industry insights, and creative problem-solving. 
+                                      This involves brain storming, ideation and sketching to develop innovative solutions, focusing on user experience, functionality and manufacturability.
+                                    </motion.h4>
                                  </div>
-                   
                                  <div className='flex flex-col py-5 items-center justify-center'>
                                    <motion.img
                                    initial={{ y: 100, opacity: 0 }}
@@ -257,7 +258,7 @@ function Engineering() {
                                        }}
                                        viewport={{ once: false, amount: 0.1 }}
                                    className='w-full lg:pt-5 font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
-                                     Peak performance beyond Sales
+                                    Delivering efficient & cost effective products
                                    </motion.h1>
                                    <motion.h4
                                    initial={{ y: 100, opacity: 0 }}
@@ -272,7 +273,7 @@ function Engineering() {
                                      },
                                    }}
                                    viewport={{ once: false, amount: 0.1 }}
-                                   className=' py-2 md:py-4 lg:pr-10  md:pt-3 text-[12px] sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
+                                   className=' py-2 md:py-4 lg:pr-10 text-justify  md:pt-3 text-[12px] sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
                                      We ensure long-term product performance with post-launch support, upgrades and predictive maintenance using IoT & AI analytics. <br />
                                      We focus on reliability & customer satisfaction through Reverse Engineering & design improvements for continued excellence.
 
@@ -298,15 +299,142 @@ function Engineering() {
                        </div>
                   </div>
 
-                  {/* This is fourth stack of engg section section 4 */}
+                  {/* This is fourth stack of engg section section 3 */}
                   <div className='blog pt-5 lg:py-10 flex flex-col items-center justify-center'>
                                    <h1 className='font-semibold lg:font-bold text-3xl sm:text-3xl md:text-5xl md:px-20 lg:px-0 lg:text-7xl text-center'>
                                    
-                                    <SplitText text="Delivering high-quality, efficient cost  & effective products" className="text-black" />
+                                    <SplitText text="Delivering high-quality, efficient & cost effective products" className="text-black" />
                                     </h1>
 
-                  </div>  
+                  </div> 
 
+
+                  {/* This is fifth stack of engg section section 3 */}
+
+                  
+                  <div className="content flex flex-col justify-start p-5 md:p-10 lg:p-20 2xl:p-30">
+                    <div className="head">
+                        <h1 className='py-2 md:py-5 font-semibold text-gray-600 text-[12px] sm:text-md md:text-lg lg:pt-5 lg:py-0 text-center lg:text-left lg:text-2xl'>
+                        PROJECT MANAGEMENT</h1>
+                    </div>
+                   <div className=" grid grid-cols-1 lg:gap-10 2xl:gap-20 lg:grid-cols-[1fr_1fr] ">
+                              <div className='flex flex-col py-5 items-center justify-center'>
+                                   <motion.img
+                                   initial={{ y: 100, opacity: 0 }}
+                                   whileInView={{
+                                     y: 0,
+                                     opacity: 1,
+                                     transition: {
+                                       delay: 0,
+                                       duration: 0.5,
+                                       ease: "easeInOut",
+                                     },
+                                   }}
+                                   className='w-full h-50 md:h-100 2xl:h-120 object-contain bg-black rounded-xl'
+                                   src="/.png" alt="platform" />
+                                   </div>  
+                              <div className=' gap-3 lg:gap-5 text-center lg:text-left flex flex-col items-center justify-center lg:items-start '>
+                                 <motion.h1
+                                       initial={{ y: 100, opacity: 0 }}
+                                       whileInView={{
+                                       y: 0,
+                                       opacity: 1,
+                                       transition: {
+                                           delay: 0,
+                                           duration: 0.5,
+                                           ease: "easeInOut",
+                                       },
+                                       }}
+                                       viewport={{ once: false, amount: 0.1 }}
+                                   className='w-full lg:pt-5 font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
+                                     Your project is in the hands of expert
+                                   </motion.h1>
+
+
+                                   <motion.h4
+                                      initial={{ y: 100, opacity: 0 }}
+                      
+                                      whileInView={{
+                                        y: 0,
+                                        opacity: 1,
+                                        transition: {
+                                          delay: 0,
+                                          duration: 0.5,
+                                          ease: "easeInOut",
+                                        },
+                                      }}
+                                      viewport={{ once: false, amount: 0.1 }}
+                                      className=' py-2 md:py-4 lg:pr-10  md:pt-3 text-[12px] text-justify sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
+                                        We streamline planning, execution, and monitoring of projects, ensuring that every phase meets the highest standards of quality, efficiency, and innovation that is also timely with cross-functional collaboration aligning with robust methodologies.                   
+                                  </motion.h4>
+                                  
+                                 </div>         
+                       </div>
+                  </div>
+                  {/* This is sixth stack of engg section section 3 */}
+                  <div className="content bg-[#F7F7F7] rounded-2xl flex flex-col justify-start p-5 md:p-10 lg:p-20 2xl:p-30">
+                    <div className="head">
+                        <h1 className='py-2 md:py-5 font-semibold text-gray-600 text-[12px] sm:text-md md:text-lg lg:pt-5 lg:py-0 text-center lg:text-left lg:text-2xl'>
+                        AFTER MARKET</h1>
+                    </div>
+                   <div className=" grid grid-cols-1 lg:grid-cols-[1fr_1fr] ">
+                              <div className=' gap-3 lg:gap-5 text-center lg:text-left flex flex-col items-center justify-center lg:items-start '>
+                                 <motion.h1
+                                       initial={{ y: 100, opacity: 0 }}
+                                       whileInView={{
+                                       y: 0,
+                                       opacity: 1,
+                                       transition: {
+                                           delay: 0,
+                                           duration: 0.5,
+                                           ease: "easeInOut",
+                                       },
+                                       }}
+                                       viewport={{ once: false, amount: 0.1 }}
+                                   className='w-full lg:pt-5 font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl '>
+                                     Peak performance beyond Sales
+                                   </motion.h1>
+                                   <motion.h4
+                                   initial={{ y: 100, opacity: 0 }}
+                   
+                                   whileInView={{
+                                     y: 0,
+                                     opacity: 1,
+                                     transition: {
+                                       delay: 0,
+                                       duration: 0.5,
+                                       ease: "easeInOut",
+                                     },
+                                   }}
+                                   viewport={{ once: false, amount: 0.1 }}
+                                   className=' py-2 md:py-4 text-justify lg:pr-10  md:pt-3 text-[12px] sm:text-sm md:text-lg md:px-20 lg:px-0 lg:text-lg 2xl:text-xl'>
+                                    We ensure long-term product performance with post-launch support, upgrades and predictive maintenance using IoT & AI analytics.   <br />
+                                    We focus on reliability & customer satisfaction through Reverse Engineering & design improvements for continued excellence.
+                                     </motion.h4>
+                                  
+                                 </div>
+                   
+                                 <div className='flex flex-col py-5 items-center justify-center'>
+                                   <motion.img
+                                   initial={{ y: 100, opacity: 0 }}
+                                   whileInView={{
+                                     y: 0,
+                                     opacity: 1,
+                                     transition: {
+                                       delay: 0,
+                                       duration: 0.5,
+                                       ease: "easeInOut",
+                                     },
+                                   }}
+                                   className='w-full h-50 md:h-100 2xl:h-120 object-contain bg-black rounded-xl'
+                                   src="/.png" alt="platform" />
+                                   </div>    
+                       </div>
+                  </div>
+
+
+
+                          <Footer/>
           </section>
 
 

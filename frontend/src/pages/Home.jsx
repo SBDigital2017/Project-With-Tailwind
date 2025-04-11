@@ -407,8 +407,8 @@ function Home() {
 
                 </div>
                 <div className="w-full p-5 ">
-                    <motion.img
-                    initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
+                    <motion.video
+                    initial={{ y: 100, opacity: 0, scale:1.1 }} // Start position (off-screen bottom)
 
                 whileInView={{
                   y: 0,
@@ -420,7 +420,7 @@ function Home() {
                   },
                 }}
                 viewport={{ once: false, amount: 0.1 }}
-                    className='object-contain h-full lg:h-100 2xl:h-120' src="/engg.png" alt="Engineering Model" />
+                    className='object-contain h-full lg:h-100 2xl:h-120' autoPlay loop muted  src="/innovativeSolutionsfinal.webm" alt="Engineering Model" />
                 </div>
             </div>
 
@@ -492,9 +492,9 @@ function Home() {
                     </motion.button>
                 </div>
                 </div>
-                <div className="  w-full">
+                <div className="overflow-hidden  w-full">
                     <motion.video
-                    initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
+                    initial={{ y: 100, opacity: 0, scale:1.3 }} // Start position (off-screen bottom)
 
                     whileInView={{
                       y: 0,
@@ -506,7 +506,7 @@ function Home() {
                       },
                     }}
                     className="h-full"
-                    src="/simplecloud.webm" 
+                    src="/ccfinalfront.webm" 
                     autoPlay
                     loop
                     muted />
@@ -580,7 +580,7 @@ function Home() {
                 </div>
                 <div className="  w-full">
                     <motion.video
-                    initial={{ y: 100, opacity: 0 }} // Start position (off-screen bottom)
+                    initial={{ y: 100, opacity: 0, scale: 1.1 }} // Start position (off-screen bottom)
 
                     whileInView={{
                       y: 0,
@@ -592,7 +592,7 @@ function Home() {
                       },
                     }}
                     className="h-full lg:h-100 2xl:h-125"
-                    src="/itservicesdraft.webm" 
+                    src="/itservicesfinal.webm" 
                     autoPlay
                     loop
                     muted />

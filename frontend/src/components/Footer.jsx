@@ -3,9 +3,11 @@ import ShinyText from "./ShinyText";
 import { motion } from "motion/react";
 import VariableProximity from "./VariableProximity";
 import ShinyTextBlue from "./ShinyTextBlue";
+import { div } from "motion/react-client";
 
 function Footer() {
   return (
+    <div className="relative bottom-0">
     <footer className="relative w-full text-white pt-10 lg:pt-15 px-6 md:px-20 lg:px-20">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050044] to-[#000033] z-0"></div>
@@ -19,7 +21,7 @@ function Footer() {
         {/* Company Name */}
         <div className="text-center md:text-left">
           <motion.h2 drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} whileDrag={{ cursor: "grabbing" }}  className="lg:text-3xl 2xl:text-4xl font-bold transition-all duration-300 hover:cursor-grab hover:scale-110 ">
-            <ShinyTextBlue text={'SB Digital Automation'} speed={5} ></ShinyTextBlue>
+            <ShinyText text={'SB Digital Automation'} speed={3} ></ShinyText>
           </motion.h2>
         </div>
 
@@ -63,6 +65,7 @@ function Footer() {
 
       <VariableProximity />
     </footer>
+    </div>
   );
 }
 

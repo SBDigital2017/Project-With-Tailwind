@@ -3,8 +3,11 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import ModelPage from './pages/Model'
+
 import Engineering from './pages/Engineering'
+import Footer from './components/Footer'
+import ITServices from './pages/ITServices'
+
 
 
 function App() {
@@ -18,9 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/model" element={<ModelPage />} /> */}
           <Route path="/engineering" element={<Engineering />} />
-          
+          <Route path="/itservices" element={<ITServices />} />
         </Routes>
       </Router>
+
     </>
   )
 }
